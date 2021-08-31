@@ -8,6 +8,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
+    <link rel="icon" type="image/x-icon" href="resource/images/LOGO DOCONVER favicon rojo.png" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
@@ -40,13 +49,14 @@
             </div>
 
             <div class="row">
-                <h1>Conversor de documentos</h1>
-                <div class="js-upload uk-placeholder uk-text-center" method="POST" style="border:5px dashed #ed3237; color: black;">
-                    <span uk-icon="icon: cloud-upload"></span>
-                    <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+                <h1 id="text">Conversor de documentos</h1>
+                <div class="js-upload uk-placeholder uk-text-center" method="POST"
+                    style="border:5px dashed #ed3237; color: black;">
+                    <span><i class="fas fa-file-upload fa-lg"></i></span>
+                    <span class="uk-text-middle" id="text">Adjunte el documento soltándolo aquí o</span>
                     <div uk-form-custom>
                         <input type="file" multiple>
-                        <span class="uk-link">selecting one</span>
+                        <span class="uk-link" id="text">seleccione uno</span>
                     </div>
                 </div>
 
@@ -114,22 +124,23 @@
                 </script>
             </div>
             <div class="row">
-                <h1>
+                <h1 id="text">
                     A que se convierte ...
                 </h1>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected>Seleccione el tipo de documento</option>
-                    <option value="1">ODT</option>
-                    <option value="2">OPT</option>
-                    <option value="3">OST</option>
-                    <option value="3">PDF</option>
-                    <option value="3">DOCX</option>
-                    <option value="3">PPTX</option>
-                    <option value="3">XLSX</option>
-                  </select>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="text">
+                    <option selected>Seleccione el formato</option>
+                    <option value="1" id="text">ODT</option>
+                    <option value="2" id="text">OPT</option>
+                    <option value="3" id="text">OST</option>
+                    <option value="4" id="text">PDF</option>
+                    <option value="5" id="text">DOCX</option>
+                    <option value="6" id="text">PPTX</option>
+                    <option value="7" id="text">XLSX</option>
+                </select>
+                <div id="button">
+                    <button class="uk-button uk-button-danger uk-button-small" id="boton">Convertir</button>
+                </div>
 
-                  <button class="uk-button uk-button-danger uk-button-small">Convertir</button>
-                  
             </div>
             <br>
         </div>
